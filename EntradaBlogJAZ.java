@@ -21,46 +21,79 @@
         es negativo, lanza una excepción.
          */
 	public EntradaBlogJAZ(int id,String autor,String texto)throws IllegalArgumentException{
+		/**
+		*@param el primer parametro sera un tipo entero que se almacenara en la variable id
+		*@param el segundo parametro sera un tipo string que se almacenara en la variable autor
+		*@param el segundo parametro sera un tipo string que se almacenara en la variable texto
+		*/
             if(id<=0) throw new IllegalArgumentException("El id no puede ser negativo");
             this.id=id;
             this.autor=autor;
             this.texto=texto;
         }
         @Override
-        public String toString(){
+        public String toString(){ 
+		/** 
+		*@param espera un String
+		*/
             String cad="";
             cad+="\nENTRADA DE"+separador+autor;
             cad+="\n "+texto;
-            return cad;
+            return cad; 
+		/**
+		*@return devuelve el valor que tenga almacenada la variable cad
+		*/
         }
 
         /**
          * Devuelve el número de la entrada
          */
         public int getId(){
+		/**
+		*@param espera un int
+		*/
             return this.id;
+		/**
+		*@return devuelve el valor que tenga almacenada la variable id
+		*/
         }
 
         /**
          * devuelve el texto completo de la entrada
          */
         public String getTexto(){
+		/**
+		*@param espera un String
+		*/
             return this.texto;
+		/**
+		*@return devuelve el valor que tenga almacenada la variable texto
+		*/
         }
 
         /**
          * devuelve el nombre del autor de la entrada en mayúsculas
          */
         public String getAutor(){
+			/**
+		*@param espera un String
+		*/
             return this.autor.toUpperCase();
+			/**
+		*@return devuelve el valor que tenga almacenada la variable autor
+		*/
         }
-
-        /**
          /**
          * devuelve el nombre del autor. Ya no se usa. Mejor ver getAutor
          */
         public String devuelveAutor(){
-            return this.autor;
+		/**
+		*@param espera un String
+		*/
+            return this.autor;  
+		/**
+		*@return devuelve el valor que tenga almacenada la variable autor
+		*/
         }
 
         /**
@@ -68,9 +101,9 @@
          */
         public static void main(String[] args) {
             /**
-             * Modificar
+             * metodo main que crea un nuevo objeto de la clase entragablogjaz e imprime por pantalla el objeto
              */
-            EntradaBlogJAZ e1=new EntradaBlogJAZ (-3,"ana","Últimas noticias, está disponible BixBy 2.0");
+            EntradaBlogJAZ e1=new EntradaBlogJAZ (-3,"jorge","Últimas noticias, está disponible BixBy 2.0");
             System.out.println(e1);
         }
     }
